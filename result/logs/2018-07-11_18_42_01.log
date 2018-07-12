@@ -1,0 +1,4 @@
+2018-07-11 18:42:48,994 ERROR common.isElementExist Line:18 元素查找出错Message: chrome not reachable
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.1.7601 SP1 x86_64)
+

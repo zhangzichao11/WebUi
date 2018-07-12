@@ -1,0 +1,10 @@
+2018-07-11 18:14:22,992 ERROR webDriver.__init__ Line:38 浏览器chrome driver有误 Message: session not created exception
+from chrome not reachable
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.1.7601 SP1 x86_64)
+
+2018-07-11 18:14:22,992 ERROR webDriver.__init__ Line:38 浏览器chrome driver有误 Message: session not created exception
+from chrome not reachable
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.1.7601 SP1 x86_64)
+
