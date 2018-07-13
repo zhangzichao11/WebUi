@@ -1,5 +1,4 @@
 from selenium import webdriver
-import unittest
 from common.md_logger import myLog
 import common.md_config as myConfig
 #根据配置选择浏览器类型
@@ -42,9 +41,6 @@ class webDriver:
                                   " text/csv, application/zip,application/xml")
                 try:
                     cls.driver = webdriver.Firefox()
-                    cls.driver.get('http://www.baidu.com')
-                    cls.driver.find_element_by_id('kw').send_keys('Selenium')
-                    cls.driver.find_element_by_id('su').click()
                 except Exception as e:
                     myLog.logger().error('浏览器firefox driver有误 %s', e)
             elif browserType == 2:

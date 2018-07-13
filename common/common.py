@@ -2,8 +2,11 @@
 该类主要是存放一些公共方法，比如：元素查找、截屏
 、操作Excel等等
 """
+#导入日志模块
 from common.md_logger import myLog
 myLog = myLog.logger()
+#导入截图模块
+from PIL import ImageGrab
 class common:
     #查找某个元素是否存在
     @staticmethod
@@ -34,3 +37,7 @@ class common:
                 isExist = False
             return isExist
 
+    @staticmethod
+    def Screenshot(ImPath,ImType):
+        im = ImageGrab.grab()
+        im.save(ImPath, ImType)
