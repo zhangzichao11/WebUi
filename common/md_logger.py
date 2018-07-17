@@ -9,33 +9,48 @@ import logging.config
 import common.md_config as myConfig
 import os
 import time
+import shutil
 from logging.handlers import RotatingFileHandler
+
+
 class myLog:
     def __init__(self):
-        global format1, maxbytes, backupcount, logLevel, reportPath, logpath
-        #日志内容的格式
+        global format1, maxBytes, backupCount, logLevel, reportPath, logPath
+        # 日志内容的格式
         format1 = myConfig.getLog('format').replace('@', '%')
-        #日志大小和数目
-        backupcount = int(myConfig.getLog('backupcount'))
-        maxbytes=int(myConfig.getLog('maxbytes'))
-        #日志级别
-        logLevel=int(myConfig.getLog('level'))
+        # 日志大小和数目
+        backupCount = int(myConfig.getLog('backupCount'))
+        maxBytes = int(myConfig.getLog('maxBytes'))
+        # 日志级别
+        logLevel = int(myConfig.getLog('level'))
         # 文件的日期格式
         rq = time.strftime('%Y-%m-%d_%H_%M_%S', time.localtime(time.time()))
-        #log文件的存放路径
-        logpath = os.path.split(os.path.dirname(__file__))[0] + '/result/logs/' + rq + '.log'
-        #report文件的存放路径
+        # log文件的存放路径
+        logPath = os.path.split(os.path.dirname(__file__))[0] + '/result/logs/' + rq + '.log'
+        # report文件的存放路径
         now = time.strftime('%Y-%m-%d_%H_%M_%S')
         reportPath = os.path.split(os.path.dirname(__file__))[0] + '/result/report/' + now + '.html'
-    #保存日志到文件的函数
+
+    # 保存日志到文件的函数
+    # 日志存放路径
+    @staticmethod
+    def getLogPath():
+        return logPath
+
+    # 测试报告存放路径
+    @staticmethod
+    def getReportPath():
+        return reportPath
+
     @staticmethod
     def logger():
-        #创建一个logger
+        # 创建一个logger
         logger1 = logging.getLogger()
         logger1.setLevel(logLevel)
         if not logger1.handlers:
-            #创建一个handler,用于写入文件
-            Rthandler = RotatingFileHandler(myLog().getLogPath(), maxBytes = maxbytes, backupCount = backupcount, encoding='utf-8')
+            # 创建一个handler,用于写入文件
+            Rthandler = RotatingFileHandler(myLog().getLogPath(), maxBytes=maxBytes, backupCount=backupCount,
+                                            encoding='utf-8')
             # 这里来设置日志的级别
             # CRITICAl    50
             # ERROR    40
@@ -44,19 +59,11 @@ class myLog:
             # DEBUG    10
             # NOSET    0
 
-            #定义handler的输出格式
-            formater = logging.Formatter(format1)
-            #给handler添加formatter
-            Rthandler.setFormatter(formater)
+            # 定义handler的输出格式
+            logFormat = logging.Formatter(format1)
+            # 给handler添加formatter
+            Rthandler.setFormatter(logFormat)
             logger1.removeHandler(Rthandler)
-            #给logger添加handler
+            # 给logger添加handler
             logger1.addHandler(Rthandler)
         return logger1
-    #日志存放路径
-    @staticmethod
-    def getLogPath():
-        return logpath
-    #测试报告存放路径
-    @staticmethod
-    def getReportPath():
-        return reportPath

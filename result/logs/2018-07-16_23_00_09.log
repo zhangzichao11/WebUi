@@ -1,0 +1,5 @@
+2018-07-16 23:00:09,936 INFO loginMusic.test_login1 Line:20 正常登录case
+2018-07-16 23:00:26,603 INFO loginMusic.test_login1 Line:30 info登录成功....True
+2018-07-16 23:00:27,812 INFO loginMusic.test_login2 Line:38 用户名错误case
+2018-07-16 23:00:31,108 INFO loginMusic.test_login3 Line:47 密码错误case
+2018-07-16 23:01:02,499 INFO searchMusic.test_search Line:24 info登录成功....True

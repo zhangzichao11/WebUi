@@ -4,9 +4,10 @@
 """
 #导入日志模块
 from common.md_logger import myLog
-myLog = myLog.logger()
-#导入截图模块
+#导入截图模
 from PIL import ImageGrab
+import time,os
+import shutil
 class common:
     #查找某个元素是否存在
     @staticmethod
@@ -15,10 +16,9 @@ class common:
         if flag == 0:
             # noinspection PyBroadException
             try:
-                print("driver的值是",driver)
                 driver.find_element_by_xpath(xpath).is_displayed()
             except Exception as e:
-                myLog.error("元素查找出错%s",e)
+                myLog.logger().error("元素查找出错%s",e)
                 isExist = False
             return isExist
         elif flag == 1:
@@ -26,18 +26,33 @@ class common:
             try:
                 driver.find_element_by_id(xpath).is_displayed()
             except Exception as e:
-                myLog.error("元素查找出错%s", e)
+                myLog.logger().error("元素查找出错%s", e)
                 isExist = False
             return isExist
         elif flag == 2:
             try:
                 driver.find_elements_by_name(xpath).is_displayed()
             except Exception as e:
-                myLog.error("元素查找出错%s", e)
+                myLog.logger().error("元素查找出错%s", e)
                 isExist = False
             return isExist
+    #截屏功能
+    @staticmethod
+    def Screenshot(imPath,imType):
+        im = ImageGrab.grab()
+        im.save(imPath, imType)
 
     @staticmethod
-    def Screenshot(ImPath,ImType):
+    def Screenshot1():
+        # 文件的日期格式
+        rq = time.strftime('%Y-%m-%d_%H_%M_%S', time.localtime(time.time()))
+        # log文件的存放路径
+        imPath = os.path.split(os.path.dirname(__file__))[0] + '/result/image/' + rq + '.png'
         im = ImageGrab.grab()
-        im.save(ImPath, ImType)
+        im.save(imPath)
+    #删除文件夹内容
+    @staticmethod
+    def delFile(path):
+        shutil.rmtree(path)
+        os.makedirs(path)
+
