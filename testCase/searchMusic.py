@@ -28,6 +28,16 @@ class searchMusic(webDriver,unittest.TestCase):
             common.Screenshot1()
             myLog.logger().info("登录失败....%s", e)
         #点击左侧的音乐歌单选项
-        #consolePage.click_SoloSecurity(self.driver)
-        #consolePage.click_AdsSdk(self.driver)
-        consolePage.click_musicNote(self.driver)
+        consolePage.click_MusicNote(self.driver)
+        time.sleep(2)
+        #输入要查询的playid
+        consolePage.input_Id(self.driver,'PLV9Uvc4lOjQvkn3TG7oixq59G6xezvw0f')
+        #点击查询按钮
+        consolePage.click_Query(self.driver)
+        #点击导出歌单选项
+        consolePage.export_list(self.driver)
+        #点击对话框的的导出按钮
+        time.sleep(2)
+        consolePage.export_btn(self.driver)
+        time.sleep(2)
+        consolePage.import_list(self.driver,'F:\project\\result.csv')

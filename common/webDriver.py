@@ -48,7 +48,12 @@ class webDriver:
                     myLog.logger().error('浏览器firefox driver有误 %s', e)
             elif browserType == 2:
                 try:
-                    cls.driver = webdriver.Chrome()
+                    #download.default_directory：设置下载路径
+                    #profile.default_content_settings.popups：设置为0,禁止弹出窗口
+                    options = webdriver.ChromeOptions()
+                    prefs = {'profile.default_content_settings.popups': 0, 'download.default_directory': 'f:\\project'}
+                    options.add_experimental_option('prefs', prefs)
+                    cls.driver = webdriver.Chrome(chrome_options=options)
                 except Exception as e:
                     myLog.logger().error('浏览器chrome driver有误 %s', e)
             cls.driver.get(testUrl)
