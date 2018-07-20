@@ -1,7 +1,7 @@
 """
 登陆界面的元素
 """
-from common.common import common
+import common.common as common
 #登录名
 def setUserName(driver,userName):
     print("\nmyDriver",driver)
@@ -20,3 +20,11 @@ def isLogin(driver):
 #退出登录
 def click_exit(driver):
     driver.find_element_by_xpath('//*[@id="wrapper"]/nav/ul/li[2]/a').click()
+#登录名错误的的文案
+def userName_Error(driver):
+    userName_Text = driver.find_element_by_xpath('//*[@id="password"]/p').text
+    return userName_Text
+#用户名为空的文案
+def userName_Null(driver):
+    userName_Text = driver.find_element_by_xpath('//*[@id="email"]/ul/li').text
+    return userName_Text
