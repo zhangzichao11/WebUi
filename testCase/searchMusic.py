@@ -1,12 +1,12 @@
-from common.webDriver import webDriver
+from comm.webDriver import webDriver
 #导入登录界面元素类
 import pageElement.loginPage as loginPage
 #导入后台主界面元素类
 import pageElement.consolePage as consolePage
 #导入日志模块类
-from common.md_logger import myLog
+from comm.md_logger import myLog
 #导入公共方法类
-import common.common as common
+import comm.common as common
 import paramunittest
 import unittest
 import time

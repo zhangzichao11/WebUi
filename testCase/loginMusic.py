@@ -7,13 +7,13 @@
 """
 import time
 #导入浏览器driver类
-from common.webDriver import webDriver
+from comm.webDriver import webDriver
 #导入界面元素类
 import pageElement.loginPage as login_Page
 #导入日志模块类
-from common.md_logger import myLog
+from comm.md_logger import myLog
 #导入公共方法类
-import common.common as common
+import comm.common as common
 import unittest
 import paramunittest
 loginCase = common.get_excel_value('login')

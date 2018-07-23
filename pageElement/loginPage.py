@@ -1,7 +1,7 @@
 """
 登陆界面的元素
 """
-import common.common as common
+import comm.common as common
 #登录名
 def setUserName(driver,userName):
     print("\nmyDriver",driver)
