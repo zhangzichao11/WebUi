@@ -1,0 +1,13 @@
+2018-07-20 18:57:58,039 INFO loginMusic.test_Login Line:32 测试用例名称:test_login1
+2018-07-20 18:57:58,040 INFO loginMusic.test_Login Line:33 测试用例说明:正常登陆的case
+2018-07-20 18:58:28,047 INFO loginMusic.test_Login Line:42 实际结果的值是:True
+2018-07-20 18:58:28,048 INFO loginMusic.test_Login Line:43 预期结果的值是:1
+2018-07-20 18:58:28,226 INFO loginMusic.test_Login Line:47 info登录成功....True
+2018-07-20 18:58:48,564 INFO loginMusic.test_Login Line:32 测试用例名称:test_login2
+2018-07-20 18:58:48,565 INFO loginMusic.test_Login Line:33 测试用例说明:用户名错误,密码正确的case
+2018-07-20 18:58:52,063 INFO loginMusic.test_Login Line:59 实际结果的值是:wrong username or password!
+2018-07-20 18:58:52,063 INFO loginMusic.test_Login Line:60 预期结果的值是:wrong username or password!
+2018-07-20 18:59:08,227 INFO loginMusic.test_Login Line:32 测试用例名称:test_login3
+2018-07-20 18:59:08,228 INFO loginMusic.test_Login Line:33 测试用例说明:用户名正确,密码错误的case
+2018-07-20 18:59:14,607 INFO loginMusic.test_Login Line:69 实际结果的值是:wrong username or password!
+2018-07-20 18:59:14,607 INFO loginMusic.test_Login Line:70 预期结果的值是:wrong username or password!

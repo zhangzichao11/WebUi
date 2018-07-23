@@ -1,6 +1,6 @@
 from selenium import webdriver
-from common.md_logger import myLog
-import common.md_config as myConfig
+from comm.md_logger import myLog
+import comm.md_config as myConfig
 #根据配置选择浏览器类型
 class webDriver:
 

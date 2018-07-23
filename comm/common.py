@@ -3,7 +3,8 @@
 、操作Excel等等
 """
 #导入日志模块
-from common.md_logger import myLog
+from comm.md_logger import myLog
+
 #导入截图模
 from PIL import ImageGrab
 #读excel模块
@@ -85,4 +86,3 @@ def get_excel_value(sheet_name):
         if sheet.row_values(i)[0] != 'case_Name':
             cls.append(sheet.row_values(i))
     return cls
-

@@ -6,10 +6,9 @@
 时间:2018.7.10
 """
 import logging.config
-import common.md_config as myConfig
+import comm.md_config as myConfig
 import os
 import time
-import shutil
 from logging.handlers import RotatingFileHandler
 
 
