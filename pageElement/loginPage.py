@@ -1,10 +1,11 @@
 """
 登陆界面的元素
 """
+from comm.md_logger import myLog
 import comm.common as common
 #登录名
 def setUserName(driver,userName):
-    print("\nmyDriver",driver)
+    myLog.logger().info('use_namedriver: %s',driver)
     driver.find_element_by_name('email').send_keys(userName)
 #登录密码
 def setUserPwd(driver, userPwd):

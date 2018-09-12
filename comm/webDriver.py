@@ -23,6 +23,7 @@ class webDriver:
     @classmethod
     def setUpClass(cls):
         print("setUpClass\n")
+        global driver
         #所有的test运行前运行一次
         # noinspection PyUnreachableCode
         #获取浏览器配置信息

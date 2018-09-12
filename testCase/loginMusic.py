@@ -25,16 +25,18 @@ class loginMusic(webDriver, unittest.TestCase):
         self.user_Pwd = user_Pwd
         self.excepted = excepted
         self.reMark = reMarks
-    #正常登陆的case
     def test_Login(self):
         #设置用例名称
         self._testMethodDoc = self.case_Name
         myLog.logger().info('测试用例名称:' + self._testMethodDoc)
         myLog.logger().info('测试用例说明:' + self.reMark)
+        time.sleep(2)
+        myLog.logger().info('use_name:' + self.user_Name)
+        myLog.logger().info('driver %s',self.driver)
         login_Page.setUserName(self.driver, self.user_Name)
         login_Page.setUserPwd(self.driver, self.user_Pwd)
         login_Page.click_login(self.driver)
-        #根据用例名称识别,对正常登录的case进行判断是否登录成功
+        #正常登陆的测试用例
         if self._testMethodDoc == 'test_login1':
             time.sleep(5)
             isLogin = login_Page.isLogin(self.driver)
@@ -50,7 +52,7 @@ class loginMusic(webDriver, unittest.TestCase):
                 #登陆失败之后进行截屏
                 common.Screenshot1()
                 myLog.logger().info("登录失败....%s", e)
-        #根据用例名称识别，对用户名错误,密码正确的case进行验证
+        #对用户名错误,密码正确的case
         elif self._testMethodDoc == 'test_login2':
             time.sleep(2)
             common.Screenshot1()
@@ -60,7 +62,7 @@ class loginMusic(webDriver, unittest.TestCase):
             myLog.logger().info("预期结果的值是:%s", self.excepted)
             #和预期的结果值进行对比
             self.assertEqual(act_text, self.excepted)
-        #根据用例名称识别，对用户名正确,密码错误的case进行验
+        #对用户名正确,密码错误的case
         elif self._testMethodDoc == 'test_login3':
             time.sleep(2)
             common.Screenshot1()

@@ -1,5 +1,5 @@
 import os
-from comm.HTMLTestRunner import HTMLTestRunner
+from comm.HTMLTestRunnerEN import HTMLTestReportEN
 import comm.runSet as runSet
 import comm.md_config as myConfig
 import comm.common as common
@@ -20,10 +20,11 @@ if __name__ == '__main__':
             common.delFile(logPath)
             common.delFile(reportPath)
       suite = runSet.set_suite()
+      print('suite',suite)
       #获取report的存放路径
       filePath = myLog().getReportPath()
       fb = open(filePath, 'wb')
-      runner = HTMLTestRunner(stream=fb, verbosity=2, title='Music UI Test', description='Music TestCase')
+      runner = HTMLTestReportEN(stream=fb, verbosity=2, title='Music UI Test', description='Music TestCase')
       runner.run(suite)
       fb.close()
       #测试邮件发送

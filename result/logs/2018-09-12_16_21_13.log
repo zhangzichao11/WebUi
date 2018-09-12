@@ -1,0 +1,23 @@
+2018-09-12 16:21:13,065 INFO loginMusic.test_Login Line:31 测试用例名称:test_login1
+2018-09-12 16:21:13,066 INFO loginMusic.test_Login Line:32 测试用例说明:正常登陆的case
+2018-09-12 16:21:15,066 INFO loginMusic.test_Login Line:34 use_name:zhangzichao@newborntown.com
+2018-09-12 16:21:15,066 INFO loginMusic.test_Login Line:35 driver <selenium.webdriver.chrome.webdriver.WebDriver (session="6c9c77445f64bb256dfb8ad01e6a59cd")>
+2018-09-12 16:21:15,066 INFO loginPage.setUserName Line:8 use_namedriver: <selenium.webdriver.chrome.webdriver.WebDriver (session="6c9c77445f64bb256dfb8ad01e6a59cd")>
+2018-09-12 16:21:31,461 INFO loginMusic.test_Login Line:44 实际结果的值是:True
+2018-09-12 16:21:31,461 INFO loginMusic.test_Login Line:45 预期结果的值是:1
+2018-09-12 16:21:31,624 INFO loginMusic.test_Login Line:49 info登录成功....True
+2018-09-12 16:21:41,479 INFO loginMusic.test_Login Line:31 测试用例名称:test_login2
+2018-09-12 16:21:41,479 INFO loginMusic.test_Login Line:32 测试用例说明:用户名错误,密码正确的case
+2018-09-12 16:21:43,480 INFO loginMusic.test_Login Line:34 use_name:zhangzi@newborntown.com
+2018-09-12 16:21:43,480 INFO loginMusic.test_Login Line:35 driver <selenium.webdriver.chrome.webdriver.WebDriver (session="bed99c8d0a3338de01a9b978cc68b8c6")>
+2018-09-12 16:21:43,481 INFO loginPage.setUserName Line:8 use_namedriver: <selenium.webdriver.chrome.webdriver.WebDriver (session="bed99c8d0a3338de01a9b978cc68b8c6")>
+2018-09-12 16:21:47,037 INFO loginMusic.test_Login Line:61 实际结果的值是:wrong username or password!
+2018-09-12 16:21:47,037 INFO loginMusic.test_Login Line:62 预期结果的值是:wrong username or password!
+2018-09-12 16:21:55,165 INFO loginMusic.test_Login Line:31 测试用例名称:test_login3
+2018-09-12 16:21:55,166 INFO loginMusic.test_Login Line:32 测试用例说明:用户名正确,密码错误的case
+2018-09-12 16:21:57,166 INFO loginMusic.test_Login Line:34 use_name:zhangzichao@newborntown.com
+2018-09-12 16:21:57,166 INFO loginMusic.test_Login Line:35 driver <selenium.webdriver.chrome.webdriver.WebDriver (session="fc46eec293cf56bea7e7cd1dece1b81d")>
+2018-09-12 16:21:57,167 INFO loginPage.setUserName Line:8 use_namedriver: <selenium.webdriver.chrome.webdriver.WebDriver (session="fc46eec293cf56bea7e7cd1dece1b81d")>
+2018-09-12 16:22:00,765 INFO loginMusic.test_Login Line:71 实际结果的值是:wrong username or password!
+2018-09-12 16:22:00,765 INFO loginMusic.test_Login Line:72 预期结果的值是:wrong username or password!
+2018-09-12 16:22:04,124 INFO runCase.<module> Line:33 邮件发送成功!
